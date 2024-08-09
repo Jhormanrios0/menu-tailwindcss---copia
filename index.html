@@ -61,11 +61,13 @@
           <input type="text" placeholder="Buscar....."
             class="text-[12px] border-2 w-full rounded-md py-2 px-3 outline-none focus:shadow-md transition duration-300" />
           <button
-            class="bg-gobColor hover:bg-navColor transition duration-300 rounded  text-white absolute right-1 top-[0.1rem] cursor-pointer p-1 min-w-8 w-7 h-8 flex justify-center items-center"
+            class="bg-gobColor hover:bg-navColor transition duration-300 rounded text-white absolute right-1 top-[0.1rem] cursor-pointer p-1 min-w-8 w-7 h-8 flex justify-center items-center"
             id="btnSearchTramite">
-            <i class="fas fa-search text-[12px]"></i>
+            <i class="fas fa-search text-[12px] block" id="iconSearch"></i>
+            <i class="fa-solid fa-xmark text-[12px] hidden" id="iconClose"></i>
           </button>
         </article>
+
         <!-- section input -->
       </section>
     </section>
@@ -78,239 +80,59 @@
   <section class="container mx-auto px-6 w-full top-0 bg-navColor sticky hidden lg:block">
     <nav class="relative bg-navColor text-black">
       <div class="container mx-auto flex justify-between">
-        <ul class="flex items-center justify-center mx-auto">
+        <ul class="flex items-center justify-center text-center mx-auto">
           <!--INICIO-->
           <li class="hover:bg-navColorHover ">
-            <a href="#" class="relative block py-6 px-2 lg:p-6 text-sm lg:text-base font-bold">INICIO</a>
+            <a href="#" class="relative block py-6 px-2 lg:p-6 text-sm lg:text-base font-semibold">INICIO</a>
           </li>
           <!--TRANSPARENCIA Y ACCESO A LA INFORMACIÓN PÚBLICA-->
           <li class="hover:bg-navColorHover ">
-            <a href="#" class="relative block py-6 px-2 lg:p-6 text-sm lg:text-base font-bold">TRANSPARENCIA Y ACCESO
-              <br>A LA INFORMACIÓN PÚBLICA</a>
+            <a href="#" class="relative block py-6 px-2 lg:p-6 text-sm lg:text-base font-semibold">TRANSPARENCIA Y
+              ACCESO A LA INFORMACIÓN PÚBLICA</a>
           </li>
           <!-- ATENCIÓN Y SERVICIOS A LA CIUDADANÍA -->
-          <li class="hoverable hover:bg-navColorHover ">
-            <a href="#"
-              class="relative block py-6 px-4 lg:p-6 text-sm lg:text-base font-bold hover:bg-navColorHover">ATENCIÓN
-              Y SERVICIOS <br>A LA CIUDADANÍA</a>
-            <section class="p-6 mega-menu mb-16 sm:mb-0 shadow-xl text-black bg-navColorHover">
-              <section class="w-full h-full  grid grid-cols-3 gap-5">
-                <section class="col-span-1 ">
-                  <div class="border-b-2 border-black w-full text-lg font-semibold pt-3 pb-1">
-                    <h3>Canales de atención</h3>
-                  </div>
-                  <ul class="list-disc pl-5 text-black flex flex-col mt-3 gap-3">
-                    <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Trámites y
-                        Servicios</a></li>
-                    <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Pagos
-                        en Línea</a></li>
-                    <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Peticiones,
-                        Quejas, Reclamos y Denuncias</a>
-                    </li>
-                    <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Mecanismos de
-                        Participación Ciudadana</a>
-                    </li>
-                    <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Agendar
-                        Citas</a>
-                    </li>
-                  </ul>
-                </section>
-                <section class="col-span-1 ">
-                  <div class="border-b-2 border-black w-full text-lg font-semibold pt-3 pb-1">
-                    <h3>Servicios de Información</h3>
-                  </div>
-                  <ul class="list-disc pl-5 text-black flex flex-col mt-3 gap-3">
-                    <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Servicios de
-                        Atención en Línea</a></li>
-                    <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Escríbale al
-                        Alcalde</a></li>
-                    <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Encuestas</a>
-                    </li>
-                    <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Caracterización
-                        de Usuarios</a>
-                    </li>
-                    <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Portal de
-                        Niños</a>
-                    </li>
-                  </ul>
-                </section>
-                <section class="col-span-1 ">
-                  <div class="border-b-2 border-black w-full text-lg font-semibold pt-3 pb-1">
-                    <h3>Notificación a Terceros</h3>
-                  </div>
-                  <ul class="list-disc pl-5 text-black flex flex-col mt-3 gap-3">
-                    <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Procesos Cobro
-                        Coactivo</a></li>
-                    <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Respuestas PQRD
-                        Anónimas</a></li>
-
-                  </ul>
-                </section>
-                <section class="col-span-1 ">
-                  <div class="border-b-2 border-black w-full text-lg font-semibold pt-3 pb-1">
-                    <h3>Trabaje con Nosotros</h3>
-                  </div>
-                  <ul class="list-disc pl-5 text-black flex flex-col mt-3 gap-3">
-                    <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Ofertas
-                        Laborales</a></li>
-                    <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Envíe
-                        su Hoja de Vida</a></li>
-                  </ul>
-                </section>
-              </section>
-            </section>
-          </li>
-          <!-- PARTICIPA -->
-          <li class="hoverable hover:bg-navColorHover ">
-            <a href="#"
-              class="relative block py-6 px-4 lg:p-6 text-sm lg:text-base font-bold hover:bg-navColorHover ">PARTICIPA</a>
-            <div class="p-6 mega-menu mb-16 sm:mb-0 shadow-xl bg-navColorHover">
-              <section class="w-full h-full  grid grid-cols-3 gap-5">
-                <section class="col-span-1 ">
-                  <div class="border-b-2 border-black w-full text-lg font-semibold pt-3 pb-1">
-                    <h3>Información General</h3>
-                  </div>
-                  <ul class="list-disc pl-5 text-black flex flex-col mt-3 gap-3">
-                    <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Descripción
-                        general del menú participa</a></li>
-                    <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Diagnostico e
-                        identificación de problemas</a></li>
-                    <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Planeación y
-                        presupuesto participativo</a>
-                    </li>
-
-                  </ul>
-                </section>
-                <section class="col-span-1 ">
-                  <div class="border-b-2 border-black w-full text-lg font-semibold pt-3 pb-1">
-                    <h3>Información Detalle</h3>
-                  </div>
-                  <ul class="list-disc pl-5 text-black flex flex-col mt-3 gap-3">
-                    <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Colaboración e
-                        innovación</a></li>
-                    <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Control
-                        Social</a></li>
-                    <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Instancias de
-                        Participación</a>
-                    </li>
-                    <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Rendición de
-                        Cuentas</a>
-                    </li>
-                  </ul>
-                </section>
-                <section class="col-span-1 ">
-                  <div class="border-b-2 border-black w-full text-lg font-semibold pt-3 pb-1">
-                    <h3>Consulta Ciudadana</h3>
-                  </div>
-                  <ul class="list-disc pl-5 text-black flex flex-col mt-3 gap-3">
-                    <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Consulta
-                        ciudadana</a></li>
-                    <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Politica
-                        Pública
-                        de Particiáción Social en Salud</a></li>
-
-                  </ul>
-                </section>
-
-              </section>
-            </div>
-          </li>
-          <!--NORMATIVIDAD  -->
           <li class="hover:bg-navColorHover ">
-            <a href="#" class="relative block py-6 px-2 lg:p-6 text-sm lg:text-base font-bold">NORMATIVIDAD</a>
+            <a href="#" class="relative block py-6 px-2 lg:p-6 text-sm lg:text-base font-semibold">ATENCIÓN
+              Y SERVICIOS A LA CIUDADANÍA</a>
           </li>
-          <!-- NUESTRA ENTIDAD -->
+          <!--PARTICIPA  -->
+          <li class="hover:bg-navColorHover ">
+            <a href="#" class="relative block py-6 px-2 lg:p-6 text-sm lg:text-base font-semibold">PARTICIPA</a>
+          </li>
+          <!-- MI MUNICIPIO -->
           <li class="hoverable hover:bg-navColorHover ">
             <a href="#"
-              class="relative block py-6 px-4 lg:p-6 text-sm lg:text-base font-bold hover:bg-navColorHover ">NUESTRA
-              ENTIDAD</a>
+              class="relative block py-6 px-4 lg:p-6 text-sm lg:text-base font-semibold hover:bg-navColorHover ">MÍ
+              MUNICIPIO</a>
             <div class="p-6 mega-menu mb-16 sm:mb-0 shadow-xl bg-navColorHover">
               <section class="w-full h-full  grid grid-cols-3 gap-5">
                 <section class="col-span-1 ">
                   <div class="border-b-2 border-black w-full text-lg font-semibold pt-3 pb-1">
-                    <h3>La Alcaldía</h3>
+                    <h3>Mí Municipio</h3>
                   </div>
                   <ul class="list-disc pl-5 text-black flex flex-col mt-3 gap-3">
+                    <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Cómo
+                        Llegar</a></li>
                     <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Misión y
-                        Visión</a></li>
-                    <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Objetivos y
-                        Funciones</a></li>
-                    <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Organigrama</a>
-                    </li>
-                    <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">
-                        Evaluación y Acuerdos de Gestión</a>
+                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Historia</a></li>
+                    <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Mapa
+                        del Sitio</a>
                     </li>
                     <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Nuestros
-                        Directivos y Funcionarios</a>
-                    </li>
-                    <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Sala
-                        de Prensa</a>
+                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Nuestra
+                        Ecología</a>
                     </li>
                     <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Objetivos de
-                        Desarrollo Sostenible</a>
+                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Nuestra
+                        Geografía</a>
                     </li>
                     <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Salud</a>
+                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Símbolos</a>
+                    </li>
+                    <li><a href="#"
+                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Territorio</a>
                     </li>
 
-                  </ul>
-                </section>
-                <section class="col-span-1 ">
-                  <div class="border-b-2 border-black w-full text-lg font-semibold pt-3 pb-1">
-                    <h3>El Municipio</h3>
-                  </div>
-                  <ul class="list-disc pl-5 text-black flex flex-col mt-3 gap-3">
-                    <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Presentación</a>
-                    </li>
-                    <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Información del
-                        Municio</a></li>
-                    <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Nuestros
-                        Simbolos</a>
-                    </li>
-                    <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Pasado,
-                        Presente
-                        y Futuro</a>
-                    </li>
-                    <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Economía</a>
-                    </li>
-                    <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Ecología</a>
-                    </li>
-                    <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Calendario de
-                        Eventos</a>
-                    </li>
                   </ul>
                 </section>
                 <section class="col-span-1 ">
@@ -319,98 +141,242 @@
                   </div>
                   <ul class="list-disc pl-5 text-black flex flex-col mt-3 gap-3">
                     <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Fiestas y
-                        Celebraciones</a></li>
-                    <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Vías
-                        de Comunicación</a></li>
+                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Agencias
+                        Turísticas</a>
+                    </li>
+                    <li><a href="#"
+                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Haciendas</a>
+                    </li>
+                    <li><a href="#"
+                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Hoteles</a>
+                    </li>
+                    <li><a href="#"
+                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Iglesias</a>
+                    </li>
+                    <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Mapa
+                        Turistico</a>
+                    </li>
+                    <li><a href="#"
+                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Museos</a>
+                    </li>
+                    <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Qué
+                        Sitios Conocer</a>
+                    </li>
+
+                  </ul>
+                </section>
+              </section>
+            </div>
+          </li>
+          <!-- SECRETARÍAS Y ENTIDADES -->
+          <li class="hoverable hover:bg-navColorHover ">
+            <a href="#"
+              class="relative block py-6 px-4 lg:p-6 text-sm lg:text-base font-semibold hover:bg-navColorHover ">SECRETARÍAS
+              Y ENTIDADES</a>
+            <div class="p-6 mega-menu mb-16 sm:mb-0 shadow-xl bg-navColorHover">
+              <section class="w-full h-full  grid grid-cols-3 gap-5">
+                <section class="col-span-1 ">
+                  <div class="border-b-2 border-black w-full text-lg font-semibold pt-3 pb-1">
+                    <h3>Entidades Descentralizadas</h3>
+                  </div>
+                  <ul class="list-disc pl-5 text-black flex flex-col mt-3 gap-3">
+                    <li><a href="#"
+                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Centro de
+                        Diagnóstico Automotor de Popayán</a>
+                    </li>
+                    <li><a href="#"
+                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Empresa de
+                        Acueducto y Alcantarillado de Popayán S.A E.S.P.</a>
+                    </li>
+                    <li><a href="#"
+                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Empresa de
+                        Telecomunicaciones de Popayán, Emtel S.A. E.S.P.</a>
+                    </li>
+                    <li><a href="#"
+                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Fundación
+                        Emtel</a>
+                    </li>
+                    <li><a href="#"
+                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Movilidad Futura
+                        S.A.S</a>
+                    </li>
+
+
+                  </ul>
+                </section>
+                <section class="col-span-1 ">
+                  <div class="border-b-2 border-black w-full text-lg font-semibold pt-3 pb-1">
+                    <h3>Oficinas Asesorias</h3>
+                  </div>
+                  <ul class="list-disc pl-5 text-black flex flex-col mt-3 gap-3">
+                    <li><a href="#"
+                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">MECI</a>
+                    </li>
+                    <li><a href="#"
+                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Oficina Asesora
+                        de Control Interno</a>
+                    </li>
+                    <li><a href="#"
+                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Oficina Asesora
+                        Gestión del Riesgo</a>
+                    </li>
+                    <li><a href="#"
+                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Oficina Asesora
+                        Jurídica</a>
+                    </li>
+                    <li><a href="#"
+                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Oficina de Prensa
+                        y Comunicación</a>
+                    </li>
+                    <li><a href="#"
+                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Oficina Asesoria
+                        de TIC</a>
+                    </li>
+
+                  </ul>
+                </section>
+                <section class="col-span-1 ">
+                  <div class="border-b-2 border-black w-full text-lg font-semibold pt-3 pb-1">
+                    <h3>Secretarías</h3>
+                  </div>
+                  <ul class="list-disc pl-5 text-black flex flex-col mt-3 gap-3">
+                    <li><a href="#"
+                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Despacho</a>
+                    </li>
+                    <li><a href="#"
+                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Secretaría de
+                        Cultura y Turismo</a>
+                    </li>
+                    <li><a href="#"
+                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Secretaría de
+                        infraestructura</a>
+                    </li>
+                    <li><a href="#"
+                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Secretaría de
+                        Deporte y Recreación</a>
+                    </li>
+                    <li><a href="#"
+                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Secretaría
+                        General</a>
+                    </li>
+                    <li><a href="#"
+                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Secretaría de
+                        Desarrollo Agroambiental y de Fomento Económico (DAFE)</a>
+                    </li>
+                    <li><a href="#"
+                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Secretaría de
+                        Educación</a>
+                    </li>
+                    <li><a href="#"
+                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Secretaría de
+                        Gobierno</a>
+                    </li>
+                    <li><a href="#"
+                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Secretaría de
+                        Hacienda</a>
+                    </li>
+                    <li><a href="#"
+                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Secretaría de
+                        Planeación</a>
+                    </li>
+                    <li><a href="#"
+                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Secretaría de
+                        Salud</a>
+                    </li>
+                    <li><a href="#"
+                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Secretaría de
+                        Tránsito y Transporte</a>
+                    </li>
+                    <li><a href="#"
+                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Secretaría de la
+                        Mujer</a>
+                    </li>
+
+
+                  </ul>
+                </section>
+
+
+              </section>
+            </div>
+          </li>
+          <!-- NUESTRA ALCALDÍA -->
+          <li class="hoverable hover:bg-navColorHover ">
+            <a href="#"
+              class="relative block py-6 px-4 lg:p-6 text-sm lg:text-base font-semibold hover:bg-navColorHover ">NUESTRA
+              <br> ALCALDIA</a>
+            <div class="p-6 mega-menu mb-16 sm:mb-0 shadow-xl bg-navColorHover">
+              <section class="w-full h-full  grid grid-cols-3 gap-5">
+                <section class="col-span-1 ">
+                  <div class="border-b-2 border-black w-full text-lg font-semibold pt-3 pb-1">
+                    <h3>Nuestra Alcaldía</h3>
+                  </div>
+                  <ul class="list-disc pl-5 text-black flex flex-col mt-3 gap-3">
                     <li><a href="#"
                         class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Directorio
-                        Turístico</a></li>
-                    <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Cómo
-                        Llegar al Municipio</a></li>
-                    <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Sitios de
-                        Interés</a></li>
-
-                  </ul>
-                </section>
-                <section class="col-span-1 ">
-                  <div class="border-b-2 border-black w-full text-lg font-semibold pt-3 pb-1">
-                    <h3>Galerias</h3>
-                  </div>
-                  <ul class="list-disc pl-5 text-black flex flex-col mt-3 gap-3">
-                    <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Galeria de
-                        Imágenes</a>
+                        Telefónico Institucional</a>
+                    </li>
+                    <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">El
+                        Alcalde</a>
                     </li>
                     <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Galeria de
-                        Videos
-                      </a>
+                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Gaceta Oficinal
+                        de la Alcaldía de Popayán</a>
                     </li>
                     <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Galeria de
-                        Mapas
-                      </a>
+                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Información
+                        Financiera y Contable</a>
                     </li>
                     <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Galeria de
-                        Audios</a>
+                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Misión y
+                        Visión</a>
+                    </li>
+                    <li><a href="#"
+                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Organigrama</a>
                     </li>
 
                   </ul>
                 </section>
+
+
+              </section>
+            </div>
+          </li>
+          <!-- COMUNICACIONES -->
+          <li class="hoverable hover:bg-navColorHover ">
+            <a href="#"
+              class="relative block py-6 px-4 lg:p-6 text-sm lg:text-base font-semibold hover:bg-navColorHover">COMUNICACIONES</a>
+            <section class="p-6 mega-menu mb-16 sm:mb-0 shadow-xl text-black bg-navColorHover">
+              <section class="w-full h-full  grid grid-cols-3 gap-5">
                 <section class="col-span-1 ">
                   <div class="border-b-2 border-black w-full text-lg font-semibold pt-3 pb-1">
-                    <h3>Directorios</h3>
+                    <h3>Comunicaciones</h3>
                   </div>
                   <ul class="list-disc pl-5 text-black flex flex-col mt-3 gap-3">
                     <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Directorio de
-                        Secretarías</a>
+                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Boletines de
+                        Prensa</a>
                     </li>
                     <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Directorio de
-                        Entidades Descentralizadas
-                      </a>
+                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Calendario de
+                        Actividades</a>
                     </li>
                     <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Directorio de
-                        Agremiaciones
-                      </a>
+                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Manual de
+                        Identidad Visual</a>
+                    </li>
+                    <li><a href="#"
+                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Noticias</a>
                     </li>
 
-                  </ul>
-                </section>
-                <section class="col-span-1 ">
-                  <div class="border-b-2 border-black w-full text-lg font-semibold pt-3 pb-1">
-                    <h3>Órganos de Control</h3>
-                  </div>
-                  <ul class="list-disc pl-5 text-black flex flex-col mt-3 gap-3">
-                    <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Personería</a>
-                    </li>
-                    <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Contraloría</a>
-                    </li>
-                    <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Procuraduría</a>
-                    </li>
-                    <li><a href="#"
-                        class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Control
-                        Interno</a>
-                    </li>
 
                   </ul>
                 </section>
 
               </section>
-            </div>
+            </section>
           </li>
-          <!-- NOTICIAS -->
-          <li class="hover:bg-navColorHover ">
-            <a href="#" class="relative block py-6 px-2 lg:p-6 text-sm lg:text-base font-bold">NOTICIAS</a>
-          </li>
+
         </ul>
       </div>
     </nav>
@@ -429,326 +395,304 @@
           </button>
         </div>
       </div>
-
       <!-- Menú de navegación móvil -->
-      <ul id="mobile-menu" class="flex-col mt-4 hidden">
+      <ul id="mobile-menu" class="flex-col mt-4 hidden font-semibold">
+        <!-- INICIO -->
         <li class="hover:bg-navColorHover">
-          <a href="#" class="block py-2 px-4 text-sm font-bold">INICIO</a>
+          <a href="#" class="block py-2 px-4 text-sm ">INICIO</a>
         </li>
+        <!-- TRANSPARENCIA Y ACCESO A LA INFORMACIÓN PUBLICA -->
         <li class="hover:bg-navColorHover">
-          <a href="#" class="block py-2 px-4 text-sm font-bold">TRANSPARENCIA Y ACCESO A LA INFORMACIÓN PÚBLICA</a>
+          <a href="#" class="block py-2 px-4 text-sm ">TRANSPARENCIA Y ACCESO A LA INFORMACIÓN PÚBLICA</a>
         </li>
+        <!-- ATENCIÓN Y SERVICIOS A LA CIUDADANIA MÍ MUNICIPIO -->
         <li class="hover:bg-navColorHover">
-          <button id="submenu-toggle" class="block py-2 px-4 text-sm font-bold w-full text-left">
-            ATENCIÓN Y SERVICIOS A LA CIUDADANÍA
+          <a href="#" class="block py-2 px-4 text-sm ">ATENCIÓN Y SERVICIOS A LA CIUDADANIA MÍ MUNICIPIO</a>
+        </li>
+        <!-- PARTICIPA -->
+        <li class="hover:bg-navColorHover">
+          <button id="submenu-toggle-participa" class="block py-2 px-4 text-sm  w-full text-left">
+            PARTICIPA
+          </button>
+        </li>
+        <!-- MÍ MUNICIPIO -->
+        <li class="hover:bg-navColorHover">
+          <button id="submenu-toggle" class="block py-2 px-4 text-sm  w-full text-left  flex gap-1 items-center">
+            <span class="underline">MÍ MUNICIPIO</span> <i class="fa-solid fa-sort-down text-lg mb-2 "></i>
           </button>
           <!-- Submenús -->
           <ul id="submenu" class="pl-4 mt-2 hidden">
             <li class="hover:bg-navColorHover">
-              <button class="block py-2 px-4 text-sm font-bold w-full text-left submenu-toggle">
-                Canales de Atención
+              <button
+                class="block py-2 px-4 text-sm font-semibold w-full text-left submenu-toggle  flex gap-1 items-center  ">
+                <span class="underline"> Mí Municipio </span> <i class="fa-solid fa-sort-down text-lg mb-1 "></i>
               </button>
               <!-- Sub-submenú 1 -->
               <ul class="list-disc pl-5 text-black flex flex-col mt-3 gap-3 hidden">
-                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Trámites
-                    y
-                    Servicios</a></li>
-                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Pagos
-                    en Línea</a></li>
-                <li><a href="#"
-                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Peticiones,
-                    Quejas, Reclamos y Denuncias</a>
+                <li><a href="#" class=" hover:underline  transition-all duration-200 ease-in-out">Cómo
+                    Llegar</a></li>
+                <li><a href="#" class=" hover:underline  transition-all duration-200 ease-in-out">Historia</a></li>
+                <li><a href="#" class=" hover:underline  transition-all duration-200 ease-in-out">Mapa
+                    del Sitio</a>
                 </li>
-                <li><a href="#"
-                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Mecanismos de
-                    Participación Ciudadana</a>
+                <li><a href="#" class=" hover:underline  transition-all duration-200 ease-in-out">Nuestra
+                    Ecología</a>
                 </li>
-                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Agendar
-                    Citas</a>
+                <li><a href="#" class=" hover:underline  transition-all duration-200 ease-in-out">Nuestra
+                    Geografía</a>
                 </li>
-              </ul>
-            </li>
-            <li class="hover:bg-navColorHover">
-              <button class="block py-2 px-4 text-sm font-bold w-full text-left submenu-toggle">
-                Servicios de Información
-              </button>
-              <!-- Sub-submenú 2 -->
-              <ul class="list-disc pl-5 text-black flex flex-col mt-3 gap-3 hidden">
-                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Servicios
-                    de
-                    Atención en Línea</a></li>
-                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Escríbale
-                    al
-                    Alcalde</a></li>
-                <li><a href="#"
-                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Encuestas</a>
+                <li><a href="#" class=" hover:underline  transition-all duration-200 ease-in-out">Símbolos</a>
                 </li>
-                <li><a href="#"
-                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Caracterización
-                    de Usuarios</a>
-                </li>
-                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Portal de
-                    Niños</a>
-                </li>
-              </ul>
-            </li>
-            <li class="hover:bg-navColorHover">
-              <button class="block py-2 px-4 text-sm font-bold w-full text-left submenu-toggle">
-                Notificación a Terceros
-              </button>
-              <!-- Sub-submenú 3 -->
-              <ul class="list-disc pl-5 text-black flex flex-col mt-3 gap-3 hidden">
-                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Procesos
-                    Cobro
-                    Coactivo</a></li>
-                <li><a href="#"
-                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Respuestas PQRD
-                    Anónimas</a></li>
-
-              </ul>
-            </li>
-            <li class="hover:bg-navColorHover">
-              <button class="block py-2 px-4 text-sm font-bold w-full text-left submenu-toggle">
-                Trabaje con Nosotros
-              </button>
-              <!-- Sub-submenú 4 -->
-              <ul class="list-disc pl-5 text-black flex flex-col mt-3 gap-3 hidden">
-                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Ofertas
-                    Laborales</a></li>
-                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Envíe
-                    su Hoja de Vida</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li class="hover:bg-navColorHover">
-          <button id="submenu-toggle-participa" class="block py-2 px-4 text-sm font-bold w-full text-left">
-            PARTICIPA
-          </button>
-          <!-- Submenús -->
-          <ul id="submenu-participa" class="pl-4 mt-2 hidden">
-            <li class="hover:bg-navColorHover">
-              <button class="block py-2 px-4 text-sm font-bold w-full text-left submenu-toggle">
-                Información General
-              </button>
-              <!-- Sub-submenú 1 -->
-              <ul class="list-disc pl-5 text-black flex flex-col mt-3 gap-3 hidden">
-                <li><a href="#"
-                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Descripción
-                    general del menú participa</a></li>
-                <li><a href="#"
-                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Diagnostico e
-                    identificación de problemas</a></li>
-                <li><a href="#"
-                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Planeación y
-                    presupuesto participativo</a>
+                <li><a href="#" class=" hover:underline  transition-all duration-200 ease-in-out">Territorio</a>
                 </li>
 
               </ul>
             </li>
             <li class="hover:bg-navColorHover">
-              <button class="block py-2 px-4 text-sm font-bold w-full text-left submenu-toggle">
-                Información Detalle
+              <button class="block py-2 px-4 text-sm  w-full text-left submenu-toggle flex gap-1 items-center ">
+                <span class="underline">Turismo </span> <i class="fa-solid fa-sort-down text-lg mb-1 "></i>
               </button>
               <!-- Sub-submenú 2 -->
               <ul class="list-disc pl-5 text-black flex flex-col mt-3 gap-3 hidden">
-                <li><a href="#"
-                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Colaboración e
-                    innovación</a></li>
-                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Control
-                    Social</a></li>
-                <li><a href="#"
-                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Instancias de
-                    Participación</a>
+                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Agencias
+                    Turísticas</a>
                 </li>
-                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Rendición
-                    de
-                    Cuentas</a>
+                <li><a href="#"
+                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Haciendas</a>
                 </li>
-              </ul>
-            </li>
-            <li class="hover:bg-navColorHover">
-              <button class="block py-2 px-4 text-sm font-bold w-full text-left submenu-toggle">
-                Consulta Ciudadana
-              </button>
-              <!-- Sub-submenú 3 -->
-              <ul class="list-disc pl-5 text-black flex flex-col mt-3 gap-3 hidden">
-                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Consulta
-                    ciudadana</a></li>
-                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Politica
-                    Pública
-                    de Particiáción Social en Salud</a></li>
+                <li><a href="#"
+                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Hoteles</a>
+                </li>
+                <li><a href="#"
+                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Iglesias</a>
+                </li>
+                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Mapa
+                    Turistico</a>
+                </li>
+                <li><a href="#"
+                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Museos</a>
+                </li>
+                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Qué
+                    Sitios Conocer</a>
+                </li>
 
               </ul>
             </li>
           </ul>
         </li>
+        <!-- SECRETARIAS Y ENTIDADES  -->
         <li class="hover:bg-navColorHover">
-          <a href="#" class="block py-2 px-4 text-sm font-bold">NORMATIVIDAD</a>
-        </li>
-        <li class="hover:bg-navColorHover">
-          <button id="submenu-toggle-entidad" class="block py-2 px-4 text-sm font-bold w-full text-left">
-            NUESTRA ENTIDAD
+          <button id="submenu-toggle-entidad" class="block py-2 px-4 text-sm  w-full text-left flex items-center gap-1">
+            <span class="underline">SECRETARÍAS Y ENTIDADES </span> <i class="fa-solid fa-sort-down text-lg mb-1 "></i>
           </button>
           <!-- Submenús -->
           <ul id="submenu-entidad" class="pl-4 mt-2 hidden">
             <li class="hover:bg-navColorHover">
-              <button class="block py-2 px-4 text-sm font-bold w-full text-left submenu-toggle">
-                La Alcaldía
+              <button
+                class="block py-2 px-4 text-sm font-medium w-full text-left submenu-toggle flex gap-1 items-center">
+                <span class="underline">Entidades Descentralizadas</span> <i
+                  class="fa-solid fa-sort-down text-lg mb-1 "></i>
               </button>
               <!-- Sub-submenú 1 -->
               <ul class="list-disc pl-5 text-black flex flex-col mt-3 gap-3 hidden">
-                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Misión y
-                    Visión</a></li>
-                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Objetivos
-                    y
-                    Funciones</a></li>
-                <li><a href="#"
-                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Organigrama</a>
+                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Centro de
+                    Diagnóstico Automotor de Popayán</a>
                 </li>
-                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">
-                    Evaluación y Acuerdos de Gestión</a>
-                </li>
-                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Nuestros
-                    Directivos y Funcionarios</a>
-                </li>
-                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Sala
-                    de Prensa</a>
-                </li>
-                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Objetivos
+                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Empresa
                     de
-                    Desarrollo Sostenible</a>
+                    Acueducto y Alcantarillado de Popayán S.A E.S.P.</a>
                 </li>
-                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Salud</a>
+                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Empresa
+                    de
+                    Telecomunicaciones de Popayán, Emtel S.A. E.S.P.</a>
                 </li>
+                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Fundación
+                    Emtel</a>
+                </li>
+                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Movilidad
+                    Futura
+                    S.A.S</a>
+                </li>
+
 
               </ul>
             </li>
             <li class="hover:bg-navColorHover">
-              <button class="block py-2 px-4 text-sm font-bold w-full text-left submenu-toggle">
-                El Municio
+              <button
+                class="block py-2 px-4 text-sm font-medium w-full text-left submenu-toggle flex gap-1 items-center">
+                <span class="underline">Oficinas Asesorias</span> <i class="fa-solid fa-sort-down text-lg mb-1 "></i>
               </button>
               <!-- Sub-submenú 2 -->
               <ul class="list-disc pl-5 text-black flex flex-col mt-3 gap-3 hidden">
-                <li><a href="#"
-                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Presentación</a>
+                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">MECI</a>
                 </li>
-                <li><a href="#"
-                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Información del
-                    Municio</a></li>
-                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Nuestros
-                    Simbolos</a>
+                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Oficina
+                    Asesora
+                    de Control Interno</a>
                 </li>
-                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Pasado,
-                    Presente
-                    y Futuro</a>
+                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Oficina
+                    Asesora
+                    Gestión del Riesgo</a>
                 </li>
-                <li><a href="#"
-                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Economía</a>
+                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Oficina
+                    Asesora
+                    Jurídica</a>
                 </li>
-                <li><a href="#"
-                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Ecología</a>
+                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Oficina
+                    de Prensa
+                    y Comunicación</a>
                 </li>
-                <li><a href="#"
-                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Calendario de
-                    Eventos</a>
+                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Oficina
+                    Asesoria
+                    de TIC</a>
                 </li>
+
               </ul>
             </li>
             <li class="hover:bg-navColorHover">
-              <button class="block py-2 px-4 text-sm font-bold w-full text-left submenu-toggle">
-                Turismo
+              <button
+                class="block py-2 px-4 text-sm font-medium w-full text-left submenu-toggle flex gap-1 items-center">
+                <span class="underline">Secretarías</span> <i class="fa-solid fa-sort-down text-lg mb-1 "></i>
               </button>
               <!-- Sub-submenú 3 -->
               <ul class="list-disc pl-5 text-black flex flex-col mt-3 gap-3 hidden">
-                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Fiestas y
-                    Celebraciones</a></li>
-                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Vías
-                    de Comunicación</a></li>
+                <li><a href="#"
+                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Despacho</a>
+                </li>
+                <li><a href="#"
+                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Secretaría de
+                    Cultura y Turismo</a>
+                </li>
+                <li><a href="#"
+                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Secretaría de
+                    infraestructura</a>
+                </li>
+                <li><a href="#"
+                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Secretaría de
+                    Deporte y Recreación</a>
+                </li>
+                <li><a href="#"
+                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Secretaría
+                    General</a>
+                </li>
+                <li><a href="#"
+                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Secretaría de
+                    Desarrollo Agroambiental y de Fomento Económico (DAFE)</a>
+                </li>
+                <li><a href="#"
+                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Secretaría de
+                    Educación</a>
+                </li>
+                <li><a href="#"
+                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Secretaría de
+                    Gobierno</a>
+                </li>
+                <li><a href="#"
+                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Secretaría de
+                    Hacienda</a>
+                </li>
+                <li><a href="#"
+                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Secretaría de
+                    Planeación</a>
+                </li>
+                <li><a href="#"
+                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Secretaría de
+                    Salud</a>
+                </li>
+                <li><a href="#"
+                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Secretaría de
+                    Tránsito y Transporte</a>
+                </li>
+                <li><a href="#"
+                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Secretaría de la
+                    Mujer</a>
+                </li>
+
+
+              </ul>
+            </li>
+
+          </ul>
+        </li>
+        <!-- NUESTRA ALCALDIA  -->
+        <li class="hover:bg-navColorHover">
+          <button id="submenu-toggle-nuestra-alcaldia"
+            class="block py-2 px-4 text-sm  w-full text-left flex items-center gap-1">
+            <span class="underline">NUESTRA ALCALDIA</span> <i class="fa-solid fa-sort-down text-lg mb-1 "></i>
+          </button>
+          <!-- Submenús -->
+          <ul id="submenu-nuestra-alcaldia" class="pl-4 mt-2 hidden">
+            <!-- Submenú 1: La Alcaldía -->
+            <li class="hover:bg-navColorHover">
+              <button
+                class="block py-2 px-4 text-sm font-normal w-full text-left submenu-toggle flex gap-1 items-center">
+                <span class="underline">Nuestra Alcaldía</span> <i class="fa-solid fa-sort-down text-lg mb-1 "></i>
+              </button>
+              <!-- Sub-submenú 1 -->
+              <ul class="list-disc pl-5 text-black flex flex-col mt-3 gap-3 hidden">
                 <li><a href="#"
                     class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Directorio
-                    Turístico</a></li>
-                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Cómo
-                    Llegar al Municipio</a></li>
-                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Sitios de
-                    Interés</a></li>
+                    Telefónico Institucional</a>
+                </li>
+                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">El
+                    Alcalde</a>
+                </li>
+                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Gaceta
+                    Oficinal
+                    de la Alcaldía de Popayán</a>
+                </li>
+                <li><a href="#"
+                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Información
+                    Financiera y Contable</a>
+                </li>
+                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Misión y
+                    Visión</a>
+                </li>
+                <li><a href="#"
+                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Organigrama</a>
+                </li>
 
               </ul>
             </li>
+
+          </ul>
+        </li>
+        <!-- COMUNICACIONES -->
+        <li class="hover:bg-navColorHover">
+          <button id="submenu-toggle-comunicaciones"
+            class="block py-2 px-4 text-sm  w-full text-left flex items-center gap-1">
+            <span class="underline">COMUNICACIONES</span> <i class="fa-solid fa-sort-down text-lg mb-1 "></i>
+          </button>
+          <!-- Submenús -->
+          <ul id="submenu-comunicaciones" class="pl-4 mt-2 hidden">
             <li class="hover:bg-navColorHover">
-              <button class="block py-2 px-4 text-sm font-bold w-full text-left submenu-toggle">
-                Galerias
+              <button
+                class="block py-2 px-4 text-sm font-medium w-full text-left submenu-toggle flex gap-1 items-center">
+                <span class="underline">Comunicaciones</span> <i class="fa-solid fa-sort-down text-lg mb-1 "></i>
               </button>
-              <!-- Sub-submenú 4 -->
+              <!-- Sub-submenú 1 -->
               <ul class="list-disc pl-5 text-black flex flex-col mt-3 gap-3 hidden">
-                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Galeria
+                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Boletines
                     de
-                    Imágenes</a>
+                    Prensa</a>
                 </li>
-                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Galeria
-                    de Videos
-                  </a>
+                <li><a href="#"
+                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Calendario de
+                    Actividades</a>
                 </li>
-                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Galeria
-                    de Mapas
-                  </a>
+                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Manual de
+                    Identidad Visual</a>
                 </li>
-                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Galeria
-                    de
-                    Audios</a>
+                <li><a href="#"
+                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Noticias</a>
                 </li>
 
-              </ul>
-            </li>
-            <li class="hover:bg-navColorHover">
-              <button class="block py-2 px-4 text-sm font-bold w-full text-left submenu-toggle">
-                Directorios
-              </button>
-              <!-- Sub-submenú 5 -->
-              <ul class="list-disc pl-5 text-black flex flex-col mt-3 gap-3 hidden">
-                <li><a href="#"
-                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Directorio de
-                    Secretarías</a>
-                </li>
-                <li><a href="#"
-                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Directorio de
-                    Entidades Descentralizadas
-                  </a>
-                </li>
-                <li><a href="#"
-                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Directorio de
-                    Agremiaciones
-                  </a>
-                </li>
-
-              </ul>
-            </li>
-            <li class="hover:bg-navColorHover">
-              <button class="block py-2 px-4 text-sm font-bold w-full text-left submenu-toggle">
-                Órganos de Control
-              </button>
-              <!-- Sub-submenú 6 -->
-              <ul class="list-disc pl-5 text-black flex flex-col mt-3 gap-3 hidden">
-                <li><a href="#"
-                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Personería</a>
-                </li>
-                <li><a href="#"
-                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Contraloría</a>
-                </li>
-                <li><a href="#"
-                    class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Procuraduría</a>
-                </li>
-                <li><a href="#" class=" hover:underline hover:text-lg transition-all duration-200 ease-in-out">Control
-                    Interno</a>
-                </li>
 
               </ul>
             </li>
           </ul>
         </li>
-        <li class="hover:bg-navColorHover">
-          <a href="#" class="block py-2 px-4 text-sm font-bold">NOTICIAS</a>
-        </li>
+
       </ul>
     </nav>
   </section>
